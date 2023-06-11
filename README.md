@@ -13,7 +13,7 @@ Quá trình được chia ra làm 4 giai đoạn chính:
   
   -	Cú pháp thực hiện: `gcc -E main.c -o main.i`
   
-Lưu ý: Trong 1 dự án thì lập trình viên có thể sử dụng nhiều thư viện khác nhau và khi họ muốn sử dụng thư viện nào thì họ #include thư viện đó vào file main.c . Khi Run thì chương trình sẽ chạy file main.c, sau khi quá trình tiền xử lý, ta sẽ có file main,i. File main.i sẽ gộp cả file main.c cùng với các thư viện mà lập trình viện đã #include vào file main.c. Từ đây một số vấn đề có thể xảy ra ví dụ như việc trùng tên Biến toàn cục (Global variables) có thể sẽ khiến chương trình gặp lỗi khi biên dịch.
+Lưu ý: Trong 1 dự án thì lập trình viên có thể sử dụng nhiều thư viện khác nhau và khi họ muốn sử dụng thư viện nào thì họ #include thư viện đó vào file main.c . Khi Run thì chương trình sẽ chạy file main.c, sau khi quá trình tiền xử lý, ta sẽ có file main.i. File main.i sẽ gộp cả file main.c cùng với các thư viện mà lập trình viện đã #include vào file main.c. Từ đây, một số vấn đề có thể xảy ra ví dụ như việc trùng tên Biến toàn cục (Global variables) có thể sẽ khiến chương trình gặp lỗi khi biên dịch.
 
 <h3><b>Compiler (Biên dịch) :</b></h3>
 
