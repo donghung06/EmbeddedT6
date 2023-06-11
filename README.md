@@ -1,5 +1,6 @@
 <h1> EmbeddedT6 </h1>
-<h3><b>Compiler</b></h3>
+
+<h2><b>Compiler</b></h2>
 
 Compiler là quá trình chuyển đổi từ ngôn ngữ bậc cao sang ngôn ngữ đích (ngôn ngữ máy) để máy tính có thể hiểu và thực thi. 
 
