@@ -37,6 +37,7 @@ Giai đoạn này sẽ tạo thành chương trình đích duy nhất cảu quá
 
 <h2><b>Macro & Function</b></h2>
 
+<h4><b>Macro</b></h4>
 - Chuyển văn bản code đầu vào nào đó thành văn bản code đầu ra theo ý mình muốn.
 - Macro xảy ra ở quá trình tiền xử lý (Preprocessor)
 - Lệnh #define có thể được sử dụng để tạo Marco
