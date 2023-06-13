@@ -33,3 +33,17 @@ Lưu ý: Trong 1 dự án thì lập trình viên có thể sử dụng nhiều 
 
 <h3><b>Linker (Trình liên kết):</b></h3>
 Giai đoạn này sẽ tạo thành chương trình đích duy nhất cảu quá trình biên dịch. Đầu ra có thể là thư viện hoặc file thực thi (executable file).
+
+
+<h2><b>Macro & Function</b></h2>
+
+- Chuyển văn bản code đầu vào nào đó thành văn bản code đầu ra theo ý mình muốn.
+- Macro xảy ra ở quá trình tiền xử lý (Preprocessor)
+- Lệnh #define có thể được sử dụng để tạo Marco
+VD: 	`#define tong(a, b) a+b`
+	    `#define CREATE_FUNC(name_func, cmd)     \
+	     void name_func(){                       \
+    		    printf("%s\n", (char*)cmd);      \
+	     }`
+Lưu ý đây là đây là các chỉ thị tiền xử lý (không phải câu lệnh) nên không có dòng nào kết thúc bằng dấu chấm phẩy
+
