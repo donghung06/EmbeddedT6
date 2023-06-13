@@ -37,7 +37,8 @@ Giai đoạn này sẽ tạo thành chương trình đích duy nhất cảu quá
 
 <h2><b>Macro & Function</b></h2>
 
-<h4><b>Macro</b></h4>
+<h4><b>Macro:</b></h4>
+
 - Chuyển văn bản code đầu vào nào đó thành văn bản code đầu ra theo ý mình muốn.
 - Macro xảy ra ở quá trình tiền xử lý (Preprocessor)
 - Lệnh #define có thể được sử dụng để tạo Marco
@@ -52,4 +53,9 @@ VD: 	`#define tong(a, b) a+b`
 		    
 	 }
 
+<h4><b>Function:</b></h4>
 
+- Hàm có chức năng giải quyết một số vấn đề chuyên biệt cho chương trình chính. Hàm được gọi nhiều lần với các tham số khác nhau.
+- Hàm là một đơn vị độc lập của chương trình, không cho phép xây dựng một hàm bên trong một hàm khác.
+- Program counter (bộ đếm): là 1 thanh ghi quản lý bộ nhớ của lệnh sẽ được thực thi tiếp theo. CPU đọc địa chỉ của lệnh sẽ được thực thi tiếp theo được lưu trữ trong bộ đếm chương trình và thực thi nó theo trình tự.
+- Stack pointer: lưu địa chỉ của item gần đây nhất được đặt trên ngăn xếp. (lưu địa chỉ ngẫu nhiên).
