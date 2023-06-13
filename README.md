@@ -40,15 +40,17 @@ Giai đoạn này sẽ tạo thành chương trình đích duy nhất cảu quá
 - Chuyển văn bản code đầu vào nào đó thành văn bản code đầu ra theo ý mình muốn.
 - Macro xảy ra ở quá trình tiền xử lý (Preprocessor)
 - Lệnh #define có thể được sử dụng để tạo Marco
-- 
+
+Lưu ý đây là đây là các chỉ thị tiền xử lý (không phải câu lệnh) nên không có dòng nào kết thúc bằng dấu chấm phẩy
+
 VD: 	`#define tong(a, b) a+b`
 
-	 `#define CREATE_FUNC(name_func, cmd)      \
+	 #define CREATE_FUNC(name_func, cmd)    \
 	 
-	     void name_func(){                     \
+	  void name_func(){                     \
 	     
-    		    printf("%s\n", (char*)cmd);    \
+    	       printf("%s\n", (char*)cmd);      \
 		    
-	     }`
-Lưu ý đây là đây là các chỉ thị tiền xử lý (không phải câu lệnh) nên không có dòng nào kết thúc bằng dấu chấm phẩy
+	  }
+
 
