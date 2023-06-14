@@ -76,7 +76,15 @@ Giai đoạn này sẽ tạo thành chương trình đích duy nhất cảu quá
 
 - Khi muốn đọc con trỏ void ta cần phải ép kiểu dữ liệu cho con trỏ. Cú pháp:  (Kiểu dữ liệu + "*") + Tên biến. VD: (int*)ptr
 
-Lưu ý: Khi khai báo con trỏ, ta phải khai báo địa chỉ của con trỏ. Nếu không con trỏ sẽ trỏ đến những địa chỉ bất kỳ khác co trong chương trình. Điều này có thể gây lỗi khi chạy chương trình. Vì vậy khi khai báo con trỏ mà chưa sử dụng, ta phải gán con trỏ bằng con trỏ NULL. Con trỏ NULL là con trỏ đặc biệt, nó có giá trị và địa chỉ = 0.
+Lưu ý: Khi khai báo con trỏ, ta phải khai báo địa chỉ của con trỏ. Nếu không con trỏ sẽ trỏ đến những địa chỉ bất kỳ khác có sử dụng trong chương trình. Điều này có thể gây lỗi khi chạy chương trình. Vì vậy khi khai báo con trỏ mà chưa sử dụng, ta phải gán con trỏ bằng con trỏ NULL. Con trỏ NULL là con trỏ đặc biệt, nó có giá trị và địa chỉ = 0.
+
+<h4><b>Con trỏ hàm (Function Pointers):</b></h4>
+
+- Con trỏ hàm trong C là con trỏ lưu trữ địa chỉ của một hàm. Ta có thể sử dụng nó để truy cập vào địa chỉ của hàm, cũng như thực thi các xử lý bên trong hàm đó.
+
+- Cú pháp khai báo con trỏ hàm: Kiểu dữ liệu + ("*" + Tên con trỏ) + (para_type_1, para_type_2, para_type_3,...). Với các para_type_ là kiểu của các đối số (parameter) được truyền vào hàm. Lưu ý kiểu con trỏ phải giống với kiểu giá trị trả về của hàm mà nó gán địa chỉ.
+
+- Cú pháp để gán địa chỉ của hàm cho con trỏ hàm: Tên con trỏ hàm = tên hàm (function) cần gán địa chỉ.
 
 
 
