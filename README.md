@@ -84,7 +84,7 @@ Lưu ý: Khi khai báo con trỏ, ta phải khai báo địa chỉ của con tr�
 
 - Cú pháp khai báo con trỏ hàm: `Kiểu dữ liệu + (Ký tự "*" + Tên con trỏ) + (para_type_1, para_type_2, para_type_3,...)`. Với các para_type_ là kiểu của các đối số (parameter) được truyền vào hàm. Lưu ý kiểu con trỏ phải giống với kiểu giá trị trả về của hàm mà nó gán địa chỉ.
 
-- Cú pháp để gán địa chỉ của hàm cho con trỏ hàm: Tên con trỏ hàm = tên hàm (function) cần gán địa chỉ.
+- Cú pháp để gán địa chỉ của hàm cho con trỏ hàm: `Tên con trỏ hàm = tên hàm (function)` cần gán địa chỉ.
 
 
 
