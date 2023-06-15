@@ -1,5 +1,32 @@
 <h1> EmbeddedT6 </h1>
 
+<h2><b>Macro & Function</b></h2>
+
+<h4><b>Macro:</b></h4>
+
+- Chuyển văn bản code đầu vào nào đó thành văn bản code đầu ra theo ý mình muốn.
+- Macro xảy ra ở quá trình tiền xử lý (Preprocessor)
+- Lệnh #define có thể được sử dụng để tạo Marco
+
+Lưu ý đây là đây là các chỉ thị tiền xử lý (không phải câu lệnh) nên không có dòng nào kết thúc bằng dấu chấm phẩy
+
+VD: 	`#define tong(a, b) a+b`
+
+	 #define CREATE_FUNC(name_func, cmd)   \
+	 void name_func(){                     \
+	      printf("%s\n", (char*)cmd);      \
+		    
+	 }
+
+<h4><b>Function:</b></h4>
+
+- Hàm có chức năng giải quyết một số vấn đề chuyên biệt cho chương trình chính. Hàm được gọi nhiều lần với các tham số khác nhau.
+- Hàm là một đơn vị độc lập của chương trình, không cho phép xây dựng một hàm bên trong một hàm khác.
+- Program counter (bộ đếm): là 1 thanh ghi quản lý bộ nhớ của lệnh sẽ được thực thi tiếp theo. CPU đọc địa chỉ của lệnh sẽ được thực thi tiếp theo được lưu trữ trong bộ đếm chương trình và thực thi nó theo trình tự.
+- Stack pointer: lưu địa chỉ của item gần đây nhất được đặt trên ngăn xếp. (lưu địa chỉ ngẫu nhiên).
+
+
+
 <h2><b>Compiler</b></h2>
 
 Compiler là quá trình chuyển đổi từ ngôn ngữ bậc cao sang ngôn ngữ đích (ngôn ngữ máy) để máy tính có thể hiểu và thực thi. 
@@ -34,28 +61,30 @@ Lưu ý: Trong 1 dự án thì lập trình viên có thể sử dụng nhiều 
 <h4><b>Linker (Trình liên kết):</b></h4>
 Giai đoạn này sẽ tạo thành chương trình đích duy nhất cảu quá trình biên dịch. Đầu ra có thể là thư viện hoặc file thực thi (executable file).
 
+<h2><b>Pointer</b></h2>
 
-<h2><b>Macro & Function</b></h2>
+<h4><b>Biến con trỏ (Pointer):</b></h4>
 
-<h4><b>Macro:</b></h4>
 
-- Chuyển văn bản code đầu vào nào đó thành văn bản code đầu ra theo ý mình muốn.
-- Macro xảy ra ở quá trình tiền xử lý (Preprocessor)
-- Lệnh #define có thể được sử dụng để tạo Marco
+- Biến con trỏ: là các biến đặc biệt dùng để lưu trữ địa chỉ.	int *ptr = địa chỉ (&a)
 
-Lưu ý đây là đây là các chỉ thị tiền xử lý (không phải câu lệnh) nên không có dòng nào kết thúc bằng dấu chấm phẩy
+- Khai báo biến con trỏ:   `Kiểu dữ liệu + Ký tự "*" + tên biến` (VD: `int *ptr`, `double *mm`)
 
-VD: 	`#define tong(a, b) a+b`
+- Con trỏ interger sẽ lưu được địa chỉ mà giá trị của địa chỉ đó có kiểu dữ liệu là interger
 
-	 #define CREATE_FUNC(name_func, cmd)   \
-	 void name_func(){                     \
-	      printf("%s\n", (char*)cmd);      \
-		    
-	 }
+- Con trỏ void là 1 con trỏ đặc biệt. Nó có thể trỏ đến địa chỉ của tất cả các đối tượng
 
-<h4><b>Function:</b></h4>
+- Khi muốn đọc con trỏ void ta cần phải ép kiểu dữ liệu cho con trỏ. Cú pháp:  `(Kiểu dữ liệu + Ký tự "*") + Tên biến. VD: (int*)ptr`
 
-- Hàm có chức năng giải quyết một số vấn đề chuyên biệt cho chương trình chính. Hàm được gọi nhiều lần với các tham số khác nhau.
-- Hàm là một đơn vị độc lập của chương trình, không cho phép xây dựng một hàm bên trong một hàm khác.
-- Program counter (bộ đếm): là 1 thanh ghi quản lý bộ nhớ của lệnh sẽ được thực thi tiếp theo. CPU đọc địa chỉ của lệnh sẽ được thực thi tiếp theo được lưu trữ trong bộ đếm chương trình và thực thi nó theo trình tự.
-- Stack pointer: lưu địa chỉ của item gần đây nhất được đặt trên ngăn xếp. (lưu địa chỉ ngẫu nhiên).
+Lưu ý: Khi khai báo con trỏ, ta phải khai báo địa chỉ của con trỏ. Nếu không con trỏ sẽ trỏ đến những địa chỉ bất kỳ khác có sử dụng trong chương trình. Điều này có thể gây lỗi khi chạy chương trình. Vì vậy khi khai báo con trỏ mà chưa sử dụng, ta phải gán con trỏ bằng con trỏ NULL. Con trỏ NULL là con trỏ đặc biệt, nó có giá trị và địa chỉ = 0.
+
+<h4><b>Con trỏ hàm (Function Pointers):</b></h4>
+
+- Con trỏ hàm trong C là con trỏ lưu trữ địa chỉ của một hàm. Ta có thể sử dụng nó để truy cập vào địa chỉ của hàm, cũng như thực thi các xử lý bên trong hàm đó.
+
+- Cú pháp khai báo con trỏ hàm: `Kiểu dữ liệu + (Ký tự "*" + Tên con trỏ) + (para_type_1, para_type_2, para_type_3,...)`. Với các para_type_ là kiểu của các đối số (parameter) được truyền vào hàm. Lưu ý kiểu con trỏ phải giống với kiểu giá trị trả về của hàm mà nó gán địa chỉ.
+
+- Cú pháp để gán địa chỉ của hàm cho con trỏ hàm: `Tên con trỏ hàm = tên hàm (function) cần gán địa chỉ`.
+
+
+
