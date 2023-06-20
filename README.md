@@ -86,5 +86,69 @@ Lưu ý: Khi khai báo con trỏ, ta phải khai báo địa chỉ của con tr�
 
 - Cú pháp để gán địa chỉ của hàm cho con trỏ hàm: `Tên con trỏ hàm = tên hàm (function) cần gán địa chỉ`.
 
+<h2><b>Phân Vùng Nhớ</b></h2>
 
+<h4><b>Text: </b></h4>
+
+- Quyền truy cập chỉ Read
+
+- Chứa khai báo hằng số trong chương trình
+
+<h4><b>Data: </b></h4>
+
+- Quyền truy cập read-write
+
+- Chứa biến toàn cục hoặc biến static với giá trị khởi tạo khác không
+
+- Biến static chỉ được giải phóng trên bộ nhớ RAM khi kết thúc chương trình
+
+<h4><b>Bss:  </b></h4>
+
+- Quyền truy cập read-write
+
+- Chứ biến toàn cục hoặc biến static với giái trị khởi tạo bằng 0 hoặc không khởi tạo
+
+- Được giải phóng khi kết thúc chương trình
+
+- Các bién ban đầu khi được khởi tạo, lưu vào phân vùng Bss thì sau đó cho dù biến có được khai báo hoặc gán giá trị thì biến đó vẫn sẽ được lưu ở phân vùng Bss. (Chỉ căn cứ vào khởi tạo đầu tiên)
+
+<h4><b>Stack:   </b></h4>
+
+- Quyền truy cập là read-write.
+
+- Được sử dụng cấp phát cho biến local, input parameter của hàm,…
+
+	- Các input parameter hoặc biến cục bộ sẽ lưu ở phân vùng stack, khi thoát khỏi hàm sẽ thu hồi vùng nhớ của các biến
+
+	- Khi gọi hàm, nó sẽ gán các input parameter với các giá trị khai báo, sau đó nó sễ thực hiện chuong trình. Các biến sẽ lưu địa chỉ trên Ram. Khi thoát khỏi chương trình, các biến sẽ thu hồi
+	
+	- Nếu gọi hàm đó lần thứ 2, các giá trị nhập vào sẽ gán với các parameter. Các biến sẽ lưu địa chỉ trên Ram, nó sẽ lưu giá trị tại các địa chỉ còn trống.
+
+- Sẽ được giải phóng khi ra khỏi block code/hàm
+
+Lưu ý: 	
+
+	- Khi viết chương trình chỉ đọc giá trị của các input để xử lý ta dùng biến
+
+	- Khi viết chương trình cần thay đổi giá trị của các input parameter thì ta dùng con trỏ
+
+<h4><b>Heap:    </b></h4>
+
+- Quyền truy cập là read-write.
+
+- Được sử dụng để cấp phát bộ nhớ động như: Malloc, Calloc, …
+	- Cấp phát động bộ nhớ: là việc cấp phát/giải phóng, thay đổi kích thước bộ nhớ một cách linh hoạt. Giúp chúng ta điều khiển được việc sử dụng bộ nhớ của chương trình. Tuy nhiên nếu ta cấp phát động không tốt (không giải phóng ô nhớ) sẽ khiến chương trình gặp lỗi tràn bộ nhớ.
+   	- Hàm Malloc: kiểu trả về là con trỏ Void, nên khi ta sử dụng ta cần phải ép kiểu
+  
+	Cú pháp: `ptr = (casttype*)malloc(size)` (với ptr là 1 con trỏ).
+
+	VD: 
+	`int* ptr;`
+  	`ptr = (int*) malloc(100* sizeof(int));`
+
+	- Khi ta đã sử dụng cấp phát động nhưng thấy thiếu, cần cấp phát thêm bộ nhớ để sử dụng thì ta dùng hàm realloc
+ 
+	Khai báo: `ptr = realloc(void* ptr, size_t size)`
+
+- Sẽ được giải phóng khi gọi hàm free,…
 
