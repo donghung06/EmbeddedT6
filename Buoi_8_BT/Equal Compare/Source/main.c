@@ -8,6 +8,6 @@ int main(int argc, char const *argv[])
 {
     char arr1[] = "Hello";
     char arr2[] = "Embedded"
-    printf("test: %d\n", isEqual(arr1, arr2));
+    printf("Result: %d\n", isEqual(arr1, arr2));
     return 0;
 }

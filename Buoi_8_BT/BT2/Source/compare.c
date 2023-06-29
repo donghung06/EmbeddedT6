@@ -8,17 +8,19 @@ Compare compareTwoString (const char arr1[], const char arr2[]){
     while (arr1 == arr2){
         if (arr1[i] == '\0')    
         {
-            printf("EQUAL\n");
-            return 0;
+            Printf("EQUAL\n");
+            return EQUAL;
         }
         i++;
+
+        if (arr1[] > arr2[])
+        {
+            Printf("Bigger\n");
+        }
+
+        else    Printf("SMALLER\n");
+
     }
-    if (arr1[i] > arr2[i])
-    {
-        printf("BIGGER\n");
-    }
-    else    printf("SMALLER\n");
-        
 }
 
 
