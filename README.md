@@ -152,3 +152,30 @@ Lưu ý:
 
 - Sẽ được giải phóng khi gọi hàm free,…
 
+<h2><b>Variable: </b></h2>
+
+<h4><b>Biến Static:    </b></h4>
+
+- Khi 1 biến cục bộ được khai báo với từ khóa static. Biến sẽ chỉ được khởi tạo 1 lần duy nhất và tồn tại suốt thời gian chạy chương trình. Giá trị của nó không bị mất đi ngay cả khi kết thúc hàm.
+
+- Biến cục bộ static chỉ có thể được gọi trong nội hàm khởi tạo ra nó. Mỗi lần được gọi, giá trị của biến chính bằng giá trị tại lần gần nhất hàm được gọi.	
+
+- Cú pháp: `static <Kieu_du_lieu> <ten_bien>;`	
+
+- Biến static nằm trong phân vùng Bss hoặc Data.
+
+<h4><b>Biến extern:    </b></h4>
+
+- Để sử dụng được biến toàn cục ở một file khác, ta sử dụng lệnh extern khai báo biến để báo rằng biến này đã được khai báo ở file khác
+
+- Cú pháp: `extern <Kieu_du_lieu> <ten_bien>;`
+
+Lưu ý: Khi sử dụng extern, ta không được khai báo giá trị ban đầu cho biến
+
+<h4><b>Biến Volatile:    </b></h4>
+
+- Ta sử dụng biến Volatile khi mà giá trị của nó có thể thay đổi một cách không báo trước
+
+- Cú pháp: `volatile <Kieu_du_lieu> <ten_bien>;`	
+
+
